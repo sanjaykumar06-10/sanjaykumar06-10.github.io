@@ -22,3 +22,22 @@ header a {
 .box {
     width: 500px;
 }
+.images{
+    border-radius: 50px;
+    
+}
+
+.summary {
+    font-size: 20px;
+    margin-top: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+}
+.know{
+    background-color: mediumaquamarine;
+    margin-top: 10px;
+    padding:7px;
+    font-size: 20px;
+    border-radius: 10px;
+    border:none;
+}
