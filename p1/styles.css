@@ -52,12 +52,12 @@ header a {
 .PROJECT{
     padding: 50px;
     display: flex;
-     justify-content:space-evenly;  /* space-between; space-around start, center, end */
+    justify-content:space-evenly;  
     align-items: center;
     background-color: aqua;
 }
  .class {
-        background-color: rgb(112, 111, 108);
+        background-color: rgba(48, 146, 100, 0.916);
         width: 200px;
         padding: 25px;
         margin: 10px;
