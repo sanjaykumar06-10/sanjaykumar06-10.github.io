@@ -54,6 +54,7 @@ header a {
     display: flex;
      justify-content:space-evenly;  /* space-between; space-around start, center, end */
     align-items: center;
+    background-color: aqua;
 }
  .class {
         background-color: rgb(112, 111, 108);
