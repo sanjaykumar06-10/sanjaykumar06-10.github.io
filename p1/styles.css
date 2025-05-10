@@ -49,3 +49,17 @@ header a {
     border-radius: 10px;
     border:none;
 }
+.PROJECT{
+    padding: 50px;
+    display: flex;
+     justify-content:space-evenly;  /* space-between; space-around start, center, end */
+    align-items: center;
+}
+ .class {
+        background-color: rgb(112, 111, 108);
+        width: 200px;
+        padding: 25px;
+        margin: 10px;
+        border: 5px solid black;
+        border-radius: 2px;
+      }
