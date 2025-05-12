@@ -99,6 +99,13 @@ header a:hover {
   margin-bottom: 30px;
 }
 
+.project-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap; /* Optional, allows wrapping on small screens */
+}
+
 .class {
   background-color: white;
   width: 220px;
