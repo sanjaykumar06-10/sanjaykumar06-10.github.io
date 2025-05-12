@@ -1,0 +1,99 @@
+/* Reset and Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f6f8;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+  transition: background-color 0.5s ease;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+  transform: scale(1.01);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 40px;
+  transition: color 0.3s ease;
+}
+
+header h1 {
+  font-size: 36px;
+  color: #005b96;
+  transition: color 0.3s ease;
+}
+
+header h2 {
+  font-size: 24px;
+  color: #007a99;
+  margin-top: 10px;
+  transition: color 0.3s ease;
+}
+
+header:hover h1,
+header:hover h2 {
+  color: #003b63;
+}
+
+/* Sections */
+.content-section {
+  margin-bottom: 30px;
+}
+
+.content-section h3 {
+  font-size: 22px;
+  color: #333;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 5px;
+  transition: border-color 0.3s ease;
+}
+
+.content-section h3:hover {
+  border-color: #007a99;
+}
+
+/* Lists */
+ol {
+  list-style-position: inside;
+  padding-left: 0;
+}
+
+ol li {
+  margin-bottom: 10px;
+  transition: transform 0.2s ease;
+}
+
+ol li:hover {
+  transform: translateX(5px);
+}
+
+a {
+  text-decoration: none;
+  color: #007b8a;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #005f6b;
+}
