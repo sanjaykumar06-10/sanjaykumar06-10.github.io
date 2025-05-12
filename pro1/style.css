@@ -355,3 +355,120 @@ footer {
   font-size: 0.96rem;
   background: #f5f5f5;
 }
+
+/* CRAZY TRANSITIONS & ANIMATIONS */
+
+* {
+  transition: all 0.3s ease-in-out;
+  scroll-behavior: smooth;
+}
+
+.logo:hover,
+.footer-logo:hover {
+  transform: scale(1.1) rotate(-3deg);
+  color: #ff5722;
+}
+
+nav ul li a:hover {
+  color: #ffc107;
+  transform: scale(1.1);
+}
+
+.header-actions:hover {
+  color: #e91e63;
+  transform: translateY(-3px);
+}
+
+.search-bar input:focus,
+.search-bar select:focus {
+  border-color: #ffc107;
+  box-shadow: 0 0 10px #ffc107;
+}
+
+.search-bar button:hover {
+  background: #ff5722;
+  transform: scale(1.05);
+}
+
+.banner-main {
+  animation: floatBanner 4s ease-in-out infinite;
+}
+
+@keyframes floatBanner {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.banner-main button:hover {
+  background: #e91e63;
+  transform: scale(1.1);
+}
+
+.banner-main img {
+  transition: transform 0.6s ease-in-out;
+}
+
+.banner-main img:hover {
+  transform: rotate(20deg) scale(1.2);
+}
+
+.category-card:hover {
+  background: #e0ffe0;
+  transform: rotate(3deg) scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.brand-card:hover {
+  background: #fffbe6;
+  transform: scale(1.08) rotate(-2deg);
+}
+
+.product-tabs button:hover {
+  background: #ffe082;
+  color: #000;
+}
+
+.product-card {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.product-card:hover {
+  transform: scale(1.05) rotate(1deg);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img:hover {
+  transform: scale(1.3) rotate(12deg);
+}
+
+.footer-links li:hover {
+  color: #e91e63;
+  transform: translateX(5px);
+}
+
+.footer-subscribe input:focus {
+  border-color: #ff9800;
+  box-shadow: 0 0 10px #ff9800;
+}
+
+.footer-subscribe button:hover {
+  background: #e91e63;
+  transform: scale(1.1);
+}
+
+.footer-bottom {
+  animation: pulseText 3s infinite;
+}
+
+@keyframes pulseText {
+  0%, 100% {
+    color: #888;
+  }
+  50% {
+    color: #000;
+  }
+}
