@@ -7,39 +7,38 @@ const products = [
 const cart = {};
 
 const addToCart = (id) => {
-  //insert id and quantity as 1 ie {1:1} if add button
-  // on box 1 is clicked, then if add button on box 3 is clicked then
-  //cart object should be {1:1,3:1}
-  // write code here....
   if (!cart[id]) {
     cart[id] = 1;
   }
-  // console.log(cart);
 };
 
 const increment = (id) => {
-  cart[id] = cart[id] + 1;
+  cart[id] += 1;
   dispCart();
 };
 
 const decrement = (id) => {
-  cart[id] = cart[id] - 1;
+  if (cart[id] > 1) {
+    cart[id] -= 1;
+  } else {
+    delete cart[id];
+  }
   dispCart();
 };
 
 const dispCart = () => {
-  let str = "<h2>Cart</h2>";
-  products.map((value) => {
-    cart[value.id] &&
-      (str += `<div>
-      ${value.name}
-      -${value.price}
-      -<button onclick='decrement(${value.id})'>-</button>
-      ${cart[value.id]}
-      <button onclick='increment(${value.id})'>+</button>
-      -${value.price * cart[value.id]}
-     </div>
-    `);
+  let str = "<h2 style='text-align:center;'>Cart</h2>";
+  products.forEach((value) => {
+    if (cart[value.id]) {
+      str += `<div class="cart-item">
+        ${value.name} - $${value.price}
+        <br/>
+        <button onclick='decrement(${value.id})'>-</button>
+        ${cart[value.id]}
+        <button onclick='increment(${value.id})'>+</button>
+        <br/>Total: $${value.price * cart[value.id]}
+      </div>`;
+    }
   });
   str += `<h4 id='orderValue'></h4>`;
   root.innerHTML = str;
@@ -50,18 +49,17 @@ const dispOrderValue = () => {
   const grandTotal = products.reduce((sum, value) => {
     return sum + value.price * (cart[value.id] ?? 0);
   }, 0);
-  orderValue.innerHTML = `Order Value: ${grandTotal}`;
+  document.getElementById("orderValue").innerText = `Order Value: $${grandTotal}`;
 };
 
 const showProducts = () => {
   let str = "";
-  products.map((value) => {
+  products.forEach((value) => {
     str += `<div>
       <h3>${value.name}</h3>
-      <h4>${value.price}</h4>
+      <h4>$${value.price}</h4>
       <button onclick='addToCart(${value.id})'>Add to Cart</button>
-     </div>
-    `;
+    </div>`;
   });
   root.innerHTML = "<div class='row'>" + str + "</div>";
 };
