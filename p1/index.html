@@ -1,121 +1,105 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet"href="styles.css">
-</head>
-<body>
-   <div class="container">
-    <header>
-     <div><h1>Venkat Sanjay</h1></div>
-     <ul>
-        <li> <a href="#home">Home</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#Services">Servies</a></li>
-        <li><a href="#About">About</a></li>
-        <li><a href="#Contacts">Contacts</a></li>
-
-     </ul>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Venkat Sanjay — Portfolio</title>
+    <meta name="description" content="Portfolio of Venkat Sanjay — MERN developer" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrap">
+        <a class="brand" href="#">Venkat Sanjay</a>
+        <nav class="nav">
+          <a href="#home">Home</a>
+          <a href="#projects">Projects</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <button id="menuBtn" class="menu-btn" aria-label="menu">☰</button>
+      </div>
     </header>
+
     <main>
-<section id="home">
-    <div class="row">
-<div class="box">
-    <h1> Geethanjali College of Engeenering and Technolgy</h1>
-    <br>
-    <p class="summary">
-Education is, without doubt, the single largest factor that shapes the destiny of a nation. 
-It is the bringing together of the head, the heart and the mind, thereby developing an all round personality.</p>
-<button class="know">Know More</button>
-</div>
-<div>
-    <img src="images/download.jpeg" alt="GCET"/>
+      <section id="home" class="hero">
+        <div class="wrap hero-grid">
+          <div class="hero-copy reveal">
+            <h1>Hi, I'm Venkat</h1>
+            <p class="muted">MERN developer focused on clean UI, performance and accessible experiences.</p>
+            <div class="cta">
+              <a class="btn primary" href="#projects">See my work</a>
+              <a class="btn ghost" href="#contact">Get in touch</a>
+            </div>
+          </div>
+          <div class="hero-media reveal">
+            <div class="avatar">
+              <img src="images/download.jpeg" alt="Venkat Sanjay" />
+            </div>
+          </div>
+        </div>
+      </section>
 
-</div>
-</div>
-</section>
-<br>
-<section class="PROJECT">
-  <h1 class="pro">PROJECTS</h1>
-  <br>
-  <div class="project-container">
-    <div class="class">
-      <h2>PROJECT 1</h2>
-      <p style="font-style: italic;">FoodMart is an online grocery store offering a variety of products and stuff.</p>
-      <button><a href="../food-mart/index.html">View Project</a></button>
-    </div>
-    <div class="class">
-      <h2>PROJECT 2</h2>
-      <p style="font-style: italic;"> My CART</p>
-      <button><a href="../p2/index.html"> view Project</a></button>
-    </div>
-    <div class="class">
-      <h2>PROJECT 3</h2>
-      <p style="font-style: italic;">My Bank</p>
-      <button><a href="../a19/index.html"> View Project</a></button>
-    </div>
-     <div class="class">
-      <h2>PROJECT 4</h2>
-      <p style="font-style: italic;">My Online Store</p>
-      <button><a href="https://gcet-react-app-vert.vercel.app/"> View Project</a></button>
-    </div>
+      <section id="projects" class="projects">
+        <div class="wrap">
+          <h2 class="section-title reveal">Selected Projects</h2>
+          <div class="grid">
+            <article class="project reveal" data-link="https://sanjaykumar-zeta.vercel.app/food-mart/index.html">
+              <div class="thumb" style="background-image:url('https://sanjaykumar-zeta.vercel.app/food-mart/images/chocolat/1.jpg')"></div>
+              <h3>FoodMart</h3>
+              <p class="muted">Online grocery store with cart and checkout flow.</p>
+              <a class="sm-link" href="https://sanjaykumar-zeta.vercel.app/food-mart/index.html" target="_blank" rel="noopener">Open →</a>
+            </article>
 
-  </div>
-</section>
+            <article class="project reveal" data-link="../p2/index.html">
+              <div class="thumb" style="background-image:url('../p2/images/hero.png')"></div>
+              <h3>My Cart</h3>
+              <p class="muted">Interactive shopping cart and product browsing.</p>
+              <a class="sm-link" href="../p2/index.html">Open →</a>
+            </article>
 
-<br>
-<section class="Services">
-    <h1 class="ser">My Services</h1>
-    <br>
-    <div class="dev">
-      <h2>Web Devlopment</h2>
-      <br>
-      <p style="font-style: italic;">Responsive websites built with MERN stack and clean design principles.</p>
-      <br>
-      <button>View</button>
-    </div>
-    <div class="dev">
-        <h2>Java Full stack</h2>
-        <br>
-        <p style="font-style: italic;">Java Full Stack Development refers to building both the front-end and back-end of web applications using Java technologies.</p>
-        
-        <button>View</button>
-    </div>
-    <div class="dev">
-        <h2>Mern Stack</h2>
-        <p style="font-style: italic;">It is a popular JavaScript-based full stack development framework that combines four powerful technologies: MongoDB, Express.js, React.js, and Node.js. </p>
-        <button>View</button>
-    </div>
-    
-</section>
-<br>
-<section id="about" class="about-section">
-  <h2 class="section-title">About Me</h2>
-  <div class="about-container">
-    <p>I am Sanjay, a dedicated MERN stack developer passionate about building full-stack applications and solving real-world problems through technology. I enjoy working on both frontend and backend development and constantly explore new tools and frameworks.</p>
-  </div>
-</section>
-<br>
-<section id="contact" class="contact-section">
-  <h2 class="section-title">Get in Touch</h2>
-  <form class="contact-form">
-    <input type="text" placeholder="Your Name" required>
-    <input type="email" placeholder="Your Email" required>
-    <textarea placeholder="FeedBack" rows="6" required></textarea>
-    <button type="submit">Send Message</button>
-  </form>
-</section>
+            <article class="project reveal" data-link="../a19/index.html">
+              <div class="thumb" style="background-image:url('../a19/images/sample.jpg')"></div>
+              <h3>Bank UI</h3>
+              <p class="muted">Simple banking flows and transaction UI.</p>
+              <a class="sm-link" href="../a19/index.html">Open →</a>
+            </article>
+          </div>
+        </div>
+      </section>
 
-  </form>
-</section>
+      <section id="about" class="about">
+        <div class="wrap">
+          <h2 class="section-title reveal">About</h2>
+          <div class="about-grid">
+            <p class="reveal">I build production-ready frontends with a focus on performance, accessibility and delightful micro-interactions. I enjoy collaborating across design and product to ship polished experiences.</p>
+            <ul class="skills reveal">
+              <li>HTML & CSS</li>
+              <li>JavaScript / React</li>
+              <li>Node.js & Express</li>
+              <li>MongoDB</li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
+      <section id="contact" class="contact">
+        <div class="wrap">
+          <h2 class="section-title reveal">Contact</h2>
+          <form class="contact-form reveal" onsubmit="event.preventDefault(); alert('Demo: message sent')">
+            <input type="text" placeholder="Your name" required />
+            <input type="email" placeholder="you@domain.com" required />
+            <textarea placeholder="Message" rows="5" required></textarea>
+            <div class="form-actions"><button class="btn primary" type="submit">Send</button></div>
+          </form>
+        </div>
+      </section>
     </main>
-    <footer>  
 
-
+    <footer class="site-footer">
+      <div class="wrap"><small>&copy; 2026 Venkat Sanjay — Built with care.</small></div>
     </footer>
-    </div>
-</body>
+
+    <script src="app.js"></script>
+  </body>
 </html>

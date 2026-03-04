@@ -1,145 +1,114 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Portfolio — Sanjay</title>
+    <meta name="description" content="Sanjay — Product Designer & Front-end Developer" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container-fluid">
-      <!-- Nav -->
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">MyPortfolio</a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item">
-                <a class="nav-link active" href="../p1/index.html">Portfolio</a>
-             </li>
+    <header class="site-header">
+      <div class="container">
+        <a class="brand" href="#">Sanjay</a>
+        <button class="nav-toggle" id="navToggle" aria-label="Open navigation">☰</button>
+        <nav class="nav" id="mainNav">
+          <a href="#projects">Work</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-inner">
+          <div class="hero-copy reveal">
+            <h1 class="display">Hi — I'm Sanjay</h1>
+            <p class="lead">Product designer & front-end developer building delightful interfaces.</p>
+            <div class="hero-actions">
+              <a class="btn primary" href="#projects">See Work</a>
+              <a class="btn ghost" href="#contact">Contact Me</a>
+            </div>
+          </div>
+          <div class="hero-media reveal">
+            <div class="profile-card" aria-hidden="true">
+              <div class="glow"></div>
+              <img src="https://picsum.photos/seed/me/360/360" alt="Profile" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="projects">
+        <div class="container">
+          <h2 class="section-title reveal">Selected Projects</h2>
+          <div class="grid">
+            <article class="card project reveal" data-link="https://sanjaykumar-zeta.vercel.app/food-mart/index.html">
+              <div class="thumb" style="background-image:url('https://sanjaykumar-zeta.vercel.app/food-mart/images/chocolat/1.jpg')"></div>
+              <h3>Food Mart</h3>
+              <p>Clean shopping experience with responsive UI and cart flow.</p>
+              <a class="sm-link" href="https://sanjaykumar-zeta.vercel.app/food-mart/index.html" target="_blank" rel="noopener">View project →</a>
+            </article>
+
+            <article class="card project reveal" data-link="../p2/index.html">
+              <div class="thumb" style="background-image:url('../p2/images/hero.png')"></div>
+              <h3>Shopping Cart</h3>
+              <p>Interactive cart & product filtering with accessibility in mind.</p>
+              <a class="sm-link" href="../p2/index.html">View project →</a>
+            </article>
+
+            <article class="card project reveal" data-link="../a19/index.html">
+              <div class="thumb" style="background-image:url('../a19/images/sample.jpg')"></div>
+              <h3>Banking UI</h3>
+              <p>Secure UI patterns and simple flows for onboarding and accounts.</p>
+              <a class="sm-link" href="../a19/index.html">View project →</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="about">
+        <div class="container">
+          <h2 class="section-title reveal">About</h2>
+          <div class="about-grid">
+            <p class="reveal">I craft interfaces that balance visual design and performance. I enjoy prototyping, frontend engineering, and collaborating with product teams to ship polished experiences.</p>
+            <ul class="skills reveal">
+              <li>HTML & CSS</li>
+              <li>JavaScript (ES6+)</li>
+              <li>React</li>
+              <li>Design Systems</li>
             </ul>
           </div>
         </div>
-      </nav>
+      </section>
 
-      <!--first row-->
-      <div class="row bg-light text-center py-5">
-        <div class="col-lg-6 d-flex flex-column justify-content-center align-items-start px-5">
-          <h1 class="text-success">MERN Stack Developer</h1>
-          <p class="text-secondary">
-            Passionate about building scalable web applications using modern
-            technologies like React, Node.js, MongoDB, and Express.
-          </p>
-          <button class="btn btn-success">MY PROJECTS </button>
-        </div>
-        <div class="col-lg-6 text-center">
-          <img src="https://picsum.photos/id/1015/300/300" class="img-fluid rounded" alt="profile" />
-        </div>
-      </div>
-
-      
-      <div class="row text-center bg-white py-5">
-        <div class="col-md-4 mb-3">
-          <div class="card border-0 shadow">
-            <div class="card-body">
-              <h5 class="card-title">Web Development</h5>
-              <p class="card-text">Responsive websites built using modern frameworks.</p>
+      <section id="contact" class="contact">
+        <div class="container">
+          <h2 class="section-title reveal">Get in touch</h2>
+          <form class="contact-form reveal" action="#" onsubmit="event.preventDefault(); alert('Thanks — message sent (demo)');">
+            <label>
+              <span class="label">Email</span>
+              <input type="email" placeholder="you@domain.com" required />
+            </label>
+            <label>
+              <span class="label">Message</span>
+              <textarea placeholder="How can I help?" rows="4" required></textarea>
+            </label>
+            <div class="form-actions">
+              <button class="btn primary" type="submit">Send</button>
             </div>
-          </div>
+          </form>
         </div>
-        <div class="col-md-4 mb-3">
-          <div class="card border-0 shadow">
-            <div class="card-body">
-              <h5 class="card-title">Java full-stack</h5>
-              <p class="card-text">Secure and efficient REST APIs using Node.js and Express.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 mb-3">
-          <div class="card border-0 shadow">
-            <div class="card-body">
-              <h5 class="card-title">MongoDB</h5>
-              <p class="card-text">MongoDB and MySQL database integration and design.</p>
-            </div>
-          </div>
-        </div>
-      </div>
+      </section>
+    </main>
 
-      <!--for middle boxes to repesent the html and tags-->
-      <div class="d-flex flex-wrap justify-content-center bg-body-secondary py-4">
-        <span class="badge text-bg-primary m-2 p-3 fs-6">HTML</span>
-        <span class="badge text-bg-primary m-2 p-3 fs-6">CSS</span>
-        <span class="badge text-bg-primary m-2 p-3 fs-6">JavaScript</span>
-        <span class="badge text-bg-primary m-2 p-3 fs-6">React</span>
-        <span class="badge text-bg-primary m-2 p-3 fs-6">Node.js</span>
-        <span class="badge text-bg-primary m-2 p-3 fs-6">MongoDB</span>
+    <footer class="site-footer">
+      <div class="container">
+        <small>&copy; 2026 Sanjay. Minimal & accessible portfolio.</small>
       </div>
+    </footer>
 
-     <!--this login info data-->
-      <div class="row justify-content-center my-5">
-        <div class="col-md-4">
-          <div class="card shadow-sm p-4">
-            <h4 class="text-center mb-4">Login</h4>
-            <div class="mb-3">
-              <input type="text" class="form-control" placeholder="Email or Phone" />
-            </div>
-            <div class="mb-3">
-              <input type="password" class="form-control" placeholder="Password" />
-            </div>
-            <button class="btn btn-primary w-100">Login</button>
-          </div>
-        </div>
-      </div>
-<!-- this for project info-->
-      <div class="d-flex flex-wrap justify-content-center mb-5">
-        <div class="card m-3" style="width: 20rem;">
-          <img src="https://picsum.photos/id/1005/400/250" class="card-img-top" alt="project 1" />
-          <div class="card-body">
-            <h5 class="card-title">FOOD MART</h5>
-            <p class="card-text"></p>
-            <a href="../food-mart/index.html" class="btn btn-outline-primary">View Project</a>
-          </div>
-        </div>
-        <div class="card m-3" style="width: 20rem;">
-          <img src="https://picsum.photos/id/1003/400/250" class="card-img-top" alt="project 2" />
-          <div class="card-body">
-            <h5 class="card-title">MY CART</h5>
-            <p class="card-text"></p>
-            <a href="../p2/index.html" class="btn btn-outline-primary">View Project</a>
-          </div>
-        </div>
-        <div class="card m-3" style="width: 20rem;">
-          <img src="https://picsum.photos/id/1000/400/250" class="card-img-top" alt="project 3" />
-          <div class="card-body">
-            <h5 class="card-title">BANK ATM</h5>
-            <p class="card-text"></p>
-            <a href="../a19/index.html" class="btn btn-outline-primary">View Project</a>
-          </div>
-        </div>
-      </div>
-
-      <!--footer-->
-      <footer class="bg-dark text-white text-center py-4">
-        <p class="mb-0">&copy; 2025 MyPortfolio. All rights reserved.</p>
-      </footer>
-    </div>
-
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
-    ></script>
+    <script src="app.js"></script>
   </body>
 </html>
